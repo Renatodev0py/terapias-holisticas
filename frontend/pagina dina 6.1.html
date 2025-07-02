@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Centro de terapias holísticas: masajes, flores de Bach, tarot, fitoterapia y más. Atención presencial y online.">
+  <meta property="og:title" content="Centro de Terapias y Bienestar | Dina Vargas" />
+  <meta property="og:description" content="Bienestar físico, mental y emocional en un solo lugar" />
+  <title>Centro de Terapias y Bienestar | Dina Vargas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      background-color: #5a189a;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #7209b7, #560bad);
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+    .container { max-width: 1100px; margin: auto; padding: 0 1rem; }
+    nav { background: #3c096c; }
+    nav .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav ul li { margin: 0.5rem 1rem; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #fbc4ff; }
+    main { padding: 2rem 0; }
+    section {
+      margin-bottom: 2.5rem;
+      background: #f8f0fb;
+      color: #333;
+      padding: 2rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    h2 { color: #7209b7; margin-top: 0; font-size: 1.8rem; }
+    footer {
+      background: #3c096c;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #3c096c;
+        padding: 1rem;
+      }
+      nav ul.show { display: flex; }
+      nav .menu-toggle { display: block; margin: 0.5rem; }
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #7209b7;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    form button {
+      background-color: #7209b7;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form button:hover {
+      background-color: #560bad;
+    }
+    .form-success {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Terapias-holisticas</h1>
+      <p>Bienestar físico, mental y emocional en un solo lugar</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
+      <ul>
+        <li><a href="#masajes"><i class="ri-spa-line"></i> Masajes</a></li>
+        <li><a href="#pedicura"><i class="ri-footprint-line"></i> Pedicura</a></li>
+        <li><a href="#flores"><i class="ri-flower-line"></i> Flores de Bach</a></li>
+        <li><a href="#terapias"><i class="ri-magic-line"></i> Terapias</a></li>
+        <li><a href="#constelaciones"><i class="ri-group-line"></i> Constelaciones</a></li>
+        <li><a href="#productos"><i class="ri-hand-coin-line"></i> Productos</a></li>
+        <li><a href="#contacto"><i class="ri-phone-line"></i> Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="masajes">
+      <h2>Masajes Terapéuticos</h2>
+      <p><strong>Masaje con pindas herbales:</strong> Efecto relajante, antiinflamatorio, mejora circulación, alivia estrés y dolor muscular. <br><strong>Duración:</strong> 45-60min | <strong>Valor:</strong> $20.000</p>
+      <p><strong>Masaje descontracturante manual:</strong> Relaja músculos, reduce dolor y mejora circulación. <br><strong>Duración:</strong> 45-60min | <strong>Valor:</strong> $20.000</p>
+      <p><strong>Masaje parafinoterapia:</strong> Hidratación, alivio de dolor articular, rigidez y artrosis. <br><strong>Duración:</strong> 45-60min | <strong>Valor:</strong> $25.000</p>
+      <p><strong>Masaje con piedras calientes:</strong> Relaja, mejora circulación y reduce ansiedad. <br><strong>Duración:</strong> 45-60min | <strong>Valor:</strong> $20.000</p>
+      <p><strong>Masaje drenaje linfático:</strong> Reduce inflamación y retención de líquidos. <br><strong>Duración:</strong> 45-60min | <strong>Valor:</strong> $18.000</p>
+      <p><strong>Masaje craneal "champi":</strong> Mejora cuello, reduce migrañas y relaja. <br><strong>Duración:</strong> 45-60min | <strong>Valor:</strong> $18.000</p>
+    </section>
+
+    <section id="pedicura">
+      <h2>Pedicura Integral</h2>
+      <p><strong>Pedicura Básica:</strong> Corte y perfilado de uñas, limado y hidratación. <br><strong>Duración:</strong> 30-40min | <strong>Valor:</strong> $10.000</p>
+      <p><strong>Pedicura Tradicional:</strong> Corte, limado, exfoliación, hidromasaje, hidratación y reflexología. <br><strong>Duración:</strong> 1hr | <strong>Valor:</strong> $18.000</p>
+    </section>
+
+    <section id="flores">
+      <h2>Terapia Flores de Bach</h2>
+      <p><strong>Tratamiento personalizado:</strong> Incluye evaluación y preparados (30ml + S.O.S.), seguimiento. <br><strong>Duración:</strong> 30-45min | <strong>Valor:</strong> $20.000</p>
+      <p><strong>Preparado específico:</strong> Para ansiedad, duelo, déficit atencional, etc. <br><strong>Frasco 30ml:</strong> $9.990</p>
+    </section>
+
+    <section id="terapias">
+      <h2>Terapias Complementarias</h2>
+      <p><strong>Tarot Terapéutico:</strong> 5 preguntas + tirada general. <br><strong>Duración:</strong> 30min | <strong>Valor:</strong> $8.000</p>
+      <p><strong>Velomancia:</strong> Evaluación de vela + informe. <br><strong>Valor:</strong> $12.000</p>
+      <p><strong>Terapia con Péndulo:</strong> Alineación de chakras, reduce estrés y bloqueos energéticos. <br><strong>Duración:</strong> 45-60min | <strong>Valor:</strong> $12.000</p>
+    </section>
+
+    <section id="constelaciones">
+      <h2>Constelaciones Familiares</h2>
+      <p><strong>Constelaciones Familiares:</strong> Identifica patrones inconscientes que afectan tu vida, sana vínculos y mejora relaciones personales, familiares o de pareja. Ideal para procesos terapéuticos profundos.</p>
+      <p><strong>Modalidad:</strong> Individual</p>
+      <p><strong>Duración:</strong> 45-60min</p>
+      <p><strong>Valor:</strong> $10.000</p>
+    </section>
+
+    <section id="productos">
+      <h2>Fitoterapia y Aromaterapia</h2>
+      <p><strong>Bruma aromática:</strong> Relajación, sueño y purificación. <br><strong>100ml + 30ml:</strong> $6.000</p>
+      <p><strong>Roll-on:</strong> Alivio localizado, mezcla de aceites esenciales. <br><strong>10ml:</strong> $3.500</p>
+      <p><strong>Ungüento terapéutico:</strong> Alivia dolor y mejora cicatrización. <br><strong>15g:</strong> $4.000</p>
+      <p><strong>Guateros de semillas:</strong> Alivio muscular, frío/calor. <br><strong>Valor:</strong> Variable según tipo</p>
+    </section>
+  </main>
+
+  <section id="contacto" class="container">
+    <h2>Registro de Cliente</h2>
+    <form action="https://script.google.com/macros/s/AKfycbyYVqKRyv-VciMrANm8c55O3SxuE7rLKRf1cfjs6a5SzVwrSYLmjWohMSNyCs4JRa4zEw/exec" method="POST" onsubmit="enviarFormulario(event)">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <input type="text" name="telefono" placeholder="Teléfono" required>
+      <input type="text" name="terapia" placeholder="Terapia que desea" required>
+      <button type="submit">Guardar</button>
+    </form>
+    <p id="estado-formulario"></p>
+  </section>
+
+  <footer>
+    <p>Sesiones online o presenciales | Envíos a todo Chile por Bluexpress</p>
+    <p>&copy; 2025 Centro de Terapias y Bienestar - Dina Vargas</p>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/56962210599" target="_blank" title="Chatea por WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      const form = event.target;
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data
+      }).then(() => {
+        document.getElementById('estado-formulario').textContent = "¡Cliente registrado con éxito!";
+        form.reset();
+      }).catch(() => {
+        document.getElementById('estado-formulario').textContent = "Error al enviar el formulario.";
+      });
+    }
+  </script>
+
+</body>
+</html>
