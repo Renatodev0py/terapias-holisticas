@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terapias Holísticas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <header class="text-3xl font-serif mb-6 text-center">
+    Centro Holístico
+  </header>
+  <main class="max-w-xl mx-auto bg-white rounded shadow p-6">
+    <div id="servicios"></div>
+  </main>
+  <script>
+    async function cargar() {
+      const r = await fetch('/servicios');
+      const s = await r.json();
+      document.getElementById('servicios').innerHTML = s.map(item => 
+        `<div class="mb-4 p-4 border rounded">
+          <h2 class="text-lg font-semibold">${item.nombre} - $${item.precio}</h2>
+          <button onclick="agendar(${item.id})" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Agendar</button>
+        </div>`
+      ).join('');
+    }
+    function agendar(servicio_id) {
+      const cliente_id = prompt('Tu ID de cliente:');
+      const fecha_hora = prompt('Fecha y hora (YYYY-MM-DD HH:MM):');
+      fetch('/agendar', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({cliente_id, servicio_id, fecha_hora})
+      })
+      .then(r => r.json())
+      .then(a => {
+        fetch(`/pagar/${a.agenda_id}`, { method: 'POST' })
+        .then(r2 => r2.json())
+        .then(console.log);
+      });
+    }
+    cargar();
+  </script>
+</body>
+</html>
